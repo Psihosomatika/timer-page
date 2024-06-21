@@ -1,0 +1,94 @@
+/* :root {
+  --font-family: "PT Root UI", sans-serif;
+  --second-family: "Bebas Neue Cyrillic", sans-serif;
+  --third-family: "Rubik", sans-serif;
+  --font3: "Bebas Neue", sans-serif;
+} */
+.root {
+  background-color: #f5f7f7;
+  color: #2d3242;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.root__wrapper-header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.block {
+  max-width: 1200px;
+  min-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.header__text {
+  font-size: 1.875em;
+}
+.header__timer-block {
+  display: flex;
+  padding-left: 15px;
+}
+.header__timer-wrapper {
+}
+.header__timer {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.75em;
+  color: #01b9c5;
+  line-height: 103%;
+  margin: 0;
+}
+.header__timer-text {
+  color: #818798;
+  margin: 0;
+  font-size: 1em;
+}
+
+.header__icon {
+  width: 5px;
+  height: 15px;
+  position: relative;
+  top: 23px;
+  margin-left: 12px;
+  margin-right: 12px;
+  fill: #01b9c5;
+}
+
+.header__timer-block_warning .header__icon {
+  fill: #fd4d35;
+}
+.header__timer-block_warning .header__timer {
+  color: #fd4d35;
+}
+
+@media screen and (max-width: 786px) {
+  .header__text {
+    font-size: 1em;
+  }
+  .header__timer {
+    font-size: 2.5em;
+  }
+  .header__timer-text {
+    font-size: 0.875em;
+  }
+  .header__icon {
+    width: 4px;
+    height: 14px;
+    top: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .header__timer-block {
+    padding-left: 20px;
+  }
+}
