@@ -54,93 +54,187 @@
             <div class="main__shadow"></div>
           </div>
           <div class="main__tariffs">
-            <div class="main__cards">
-              <div class="card">
-                <div class="card__discount-block">
-                  <svg class="card__icon">
-                    <use xlink:href="assets/icon/sprite.svg#star"></use>
-                  </svg>
-                  <span class="card__discount">-30%</span>
-                </div>
-                <h2 class="card__title">1 неделя</h2>
-                <div class="card__price-wrapper">
-                  <p class="card__discounted-price">699₽</p>
-                  <p class="card__price">999₽</p>
-                </div>
-                <p class="card__text">Чтобы просто начать 👍🏻</p>
-              </div>
-              <div class="card">
-                <div class="card__discount-block">
-                  <svg class="card__icon">
-                    <use xlink:href="assets/icon/sprite.svg#star"></use>
-                  </svg>
-                  <span class="card__discount">-40%</span>
-                </div>
-                <h2 class="card__title">1 месяц</h2>
-                <div class="card__price-wrapper">
-                  <p class="card__discounted-price">999₽</p>
-                  <p class="card__price">1690₽</p>
-                </div>
-                <p class="card__text">Привести тело впорядок 💪🏻</p>
-              </div>
-              <div class="card">
-                <div class="card__discount-block">
-                  <svg class="card__icon">
-                    <use xlink:href="assets/icon/sprite.svg#star"></use>
-                  </svg>
-                  <span class="card__discount">-50%</span>
-                </div>
-                <h2 class="card__title">3 месяца</h2>
-                <div class="card__price-wrapper">
-                  <p class="card__discounted-price">2990₽</p>
-                  <p class="card__price">5990₽</p>
-                </div>
 
-                <p class="card__text">Изменить образ жизни 🔥</p>
-              </div>
-              <div class="card card-big">
-                <div class="card__discount-block">
-                  <svg class="card__icon">
-                    <use xlink:href="assets/icon/sprite.svg#star"></use>
-                  </svg>
-                  <span class="card__discount">-70%</span>
-                </div>
-                <h2 class="card__title">навсегда</h2>
-                <div class="card__price-wrapper">
-                  <p class="card__discounted-price">5990₽</p>
-                  <p class="card__price">18 990₽</p>
-                </div>
-                <p class="card__text">Всегда быть в форме и поддерживать своё здоровье ⭐️</p>
-              </div>
-            </div>
             <div class="main__information">
-              <p class="main__information-text">Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем
-                за 1 месяц</p>
               <form class="form">
-                <input type="checkbox"
-                       class="form__input"
-                       id="consent">
-                <label for=""
-                       class="form__label"
-                       for="consent"></label>
-                <p class="form__text">Я соглашаюсь с <a href="#"
-                     class="form__link">Правилами</a> сервиса и условиями <a href="#"
-                     class="form__link">Публичной
-                    оферты.</a></p>
-                <button class="form__button">Купить</button>
+                <!-- scale-in-bl появление. Исчезновение scale-out-bl-->
+                <div class="form__cards ">
+                  <label class="card">
+                    <input class="card__input"
+                           type="radio"
+                           name="tariff-selection"
+                           id="one-week">
+                    <div class="card__discount-block">
+                      <svg class="card__icon">
+                        <use xlink:href="assets/icon/sprite.svg#star"></use>
+                      </svg>
+                      <span class="card__discount">-30%</span>
+                    </div>
+                    <h2 class="card__title">1 неделя</h2>
+                    <div class="card__price-wrapper">
+                      <p class="card__discounted-price">699₽</p>
+                      <p class="card__price">999₽</p>
+                    </div>
+                    <p class="card__text">Чтобы просто начать 👍🏻</p>
+                  </label>
+                  <label class="card">
+                    <input class="card__input"
+                           type="radio"
+                           name="tariff-selection"
+                           id="one-month">
+                    <div class="card__discount-block">
+                      <svg class="card__icon">
+                        <use xlink:href="assets/icon/sprite.svg#star"></use>
+                      </svg>
+                      <span class="card__discount">-40%</span>
+                    </div>
+                    <h2 class="card__title">1 месяц</h2>
+                    <div class="card__price-wrapper">
+                      <p class="card__discounted-price">999₽</p>
+                      <p class="card__price">1690₽</p>
+                    </div>
+                    <p class="card__text">Привести тело впорядок 💪🏻</p>
+                  </label>
+                  <label class="card">
+                    <input class="card__input"
+                           type="radio"
+                           name="tariff-selection"
+                           id="three-month">
+                    <div class="card__discount-block">
+                      <svg class="card__icon">
+                        <use xlink:href="assets/icon/sprite.svg#star"></use>
+                      </svg>
+                      <span class="card__discount">-50%</span>
+                    </div>
+                    <h2 class="card__title">3 месяца</h2>
+                    <div class="card__price-wrapper">
+                      <p class="card__discounted-price">2990₽</p>
+                      <p class="card__price">5990₽</p>
+                    </div>
+
+                    <p class="card__text">Изменить образ жизни 🔥</p>
+                  </label>
+                  <label class="card card-big">
+                    <input class="card__input"
+                           type="radio"
+                           name="tariff-selection"
+                           id="forever">
+                    <div class="card__discount-block">
+                      <svg class="card__icon">
+                        <use xlink:href="assets/icon/sprite.svg#star"></use>
+                      </svg>
+                      <span class="card__discount">-70%</span>
+                    </div>
+                    <h2 class="card__title">навсегда</h2>
+                    <div class="card__price-wrapper">
+                      <p class="card__discounted-price">5990₽</p>
+                      <p class="card__price">18 990₽</p>
+                    </div>
+                    <p class="card__text">Всегда быть в форме <span class="card__special">и поддерживать своё
+                        здоровье</span>
+                      ⭐️</p>
+                  </label>
+                </div>
+                <p class="main__information-text">Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем
+                  за 1 месяц</p>
+                <div class="form__wrapper">
+                  <input type="checkbox"
+                         class="form__input"
+                         id="consent">
+                  <label for=""
+                         class="form__label"
+                         for="consent"></label>
+
+                  <p class="form__text">Я соглашаюсь с <a href="#"
+                       class="form__link">Правилами</a> сервиса и условиями <a href="#"
+                       class="form__link">Публичной
+                      оферты.</a></p>
+                </div>
+                <button class="form__button blink">Купить</button>
               </form>
+
               <p class="main__text">Нажимая «Купить», Пользователь соглашается на автоматическое списание денежных
                 средств по истечению
                 купленного периода.
                 Дальнейшие списания по тарифам участвующим в акции осуществляются по полной стоимости согласно оферте.
               </p>
             </div>
-
-
           </div>
-
         </div>
       </main>
+    </div>
+  </div>
+  <!-- popup_visable -->
+  <div class="popup ">
+    <div class="popup__wrapper">
+      <p class="popup__hot-offer">горящее предложение</p>
+      <div class="popup__close"></div>
+      <h2 class="popup__title">Не упусти свой <span class="popup__title popup__title_primary">последний шанс</span></h2>
+      <p class="poput__text">Мы знаем, как трудно начать.. <span class="poput__text poput__text_bold">Поэтому!</span>
+      <p class="poput__text poput__text_bold poput__text_border">Дарим скидку для <span
+              class="poput__text poput__text_bold poput__text_primary">лёгкого старта
+          🏃‍♂️</span></p>
+      <p class="poput__text poput__text_start">Посмотри, что мы для тебя приготовили 🔥</p>
+      <form class="popup-form">
+        <label class="card card_popup">
+          <h2 class="card__title card__title-popup">1 неделя</h2>
+          <input class="card__input"
+                 type="radio"
+                 name="tariff-selection"
+                 id="one-week">
+          <div class="card__checked"></div>
+          <p class="card__price card__price_popup">999₽</p>
+          <hr class="card__line">
+          <div class="card__discounted-popup-wrapper">
+            <p class="card__discounted-price card__discounted-price_popup">599₽</p>
+            <div class="card__discount-block card__discount-block_popup">
+              <svg class="card__icon card__icon_popup">
+                <use xlink:href="assets/icon/sprite.svg#star"></use>
+              </svg>
+              <span class="card__discount">-40%</span>
+            </div>
+          </div>
+        </label>
+        <label class="card card_popup">
+          <h2 class="card__title card__title-popup">1 месяц</h2>
+          <input class="card__input"
+                 type="radio"
+                 name="tariff-selection"
+                 id="one-month">
+          <div class="card__checked"></div>
+          <p class="card__price card__price_popup">1690₽</p>
+          <hr class="card__line">
+          <div class="card__discounted-popup-wrapper">
+            <p class="card__discounted-price card__discounted-price_popup">799₽</p>
+            <div class="card__discount-block card__discount-block_popup">
+              <svg class="card__icon card__icon_popup">
+                <use xlink:href="assets/icon/sprite.svg#star"></use>
+              </svg>
+              <span class="card__discount">-50%</span>
+            </div>
+          </div>
+        </label>
+        <label class="card card_popup">
+          <h2 class="card__title card__title-popup">3 месяца</h2>
+          <input class="card__input"
+                 type="radio"
+                 name="tariff-selection"
+                 id="three-month">
+          <div class="card__checked"></div>
+          <p class="card__price card__price_popup">5990₽</p>
+          <hr class="card__line">
+          <div class="card__discounted-popup-wrapper">
+            <p class="card__discounted-price card__discounted-price_popup">1690₽</p>
+            <div class="card__discount-block card__discount-block_popup">
+              <svg class="card__icon card__icon_popup">
+                <use xlink:href="assets/icon/sprite.svg#star"></use>
+              </svg>
+              <span class="card__discount">-60%</span>
+            </div>
+          </div>
+        </label>
+        <button class="popup__btn">Начать тренироваться</button>
+      </form>
     </div>
   </div>
   <script src="assets/script/index.js"></script>
