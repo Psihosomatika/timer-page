@@ -84,11 +84,38 @@ html {
 .header__timer-block_warning .header__timer {
   color: #fd4d35;
 }
-
-.main {
+.header__timer-block_warning .main {
   background-color: #f5f7f7;
   padding-top: 123px;
   padding-bottom: 20px;
+}
+
+.header__timer-block_warning {
+  animation-name: headerblinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-duration: 1s;
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -webkit-animation-duration: 1s;
+}
+@keyframes headerblinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .main__title {
   font-family: "Rubik", sans-serif;
@@ -373,6 +400,7 @@ html {
   font-size: 20px;
   text-transform: uppercase;
   margin-top: 40px;
+  cursor: pointer;
 }
 .main__text {
   color: #818798;
@@ -501,12 +529,28 @@ html {
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(2, 0, 0, 1);
   animation-duration: 3s;
-  /* -webkit-animation-name: blinker;
+  -webkit-animation-name: blinker;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  -webkit-animation-duration: 3s; */
+  -webkit-animation-duration: 3s;
+}
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .scale-out-bl {
   -webkit-animation: scale-out-bl 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
@@ -542,24 +586,6 @@ html {
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     opacity: 1;
-  }
-}
-
-@keyframes blinker {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes blinker {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 .scale-in-bl {
