@@ -549,7 +549,7 @@ html {
 .blink {
   animation-name: blinker;
   animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(2, 0, 0, 1);
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
   animation-duration: 3s;
   -webkit-animation-name: blinker;
   -webkit-animation-iteration-count: infinite;
@@ -760,9 +760,7 @@ html {
     margin: 0;
     text-align: start;
   }
-  /* .card__price-wrapper {
-    max-width: 125px;
-  } */
+
   .card__discounted-price {
     font-size: 2.75em;
   }
