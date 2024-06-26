@@ -50,7 +50,7 @@ const createCardWithoutDiscount = (i, name, price, arrText) => {
         id="one-week">
       <h2 class="card__title">${name[i]}</h2>
       <div class="card__price-wrapper">
-        <p class="card__discounted-price">${price[i]}₽</p>
+        <p class="card__discounted-price card__discounted-price_without-discont">${price[i]}₽</p>
       </div>
       <p class="card__text">${arrText[i]}</p>
     `;
