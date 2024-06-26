@@ -12,3 +12,4 @@
 <li>Все инпуты кастомные</li>
 <li>Верстка не pixelPerfect, но умею и это</li>
 </ol>
+ссылка на опубликованную работу https://psihosomatika.github.io/timer-page/
