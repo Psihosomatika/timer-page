@@ -152,8 +152,6 @@ html {
   min-height: 131px;
   background: linear-gradient(180deg, #f5f7f700 0%, #f5f7f7 100%);
 }
-.main__tariffs {
-}
 .form__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -193,7 +191,7 @@ html {
   border-radius: 50%;
   position: absolute;
   top: 27px;
-  right: 22px;
+  right: 11px;
   width: 22px;
   height: 22px;
 }
@@ -226,7 +224,7 @@ html {
 }
 .card__discount-block_popup {
   top: -20px;
-  right: 35px;
+  right: 20px;
 }
 .card__icon {
   width: 70px;
@@ -248,7 +246,7 @@ html {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 1.75em;
 }
 .card__title-popup {
   color: #2d3242;
@@ -422,7 +420,35 @@ html {
 }
 .popup_visable {
   display: flex;
+  -webkit-animation: slide-in-fwd-center 0.4s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 .popup__wrapper {
   background-color: #f5f7f7;
   min-width: 75%;
@@ -507,6 +533,10 @@ html {
   margin-top: 40px;
 }
 .popup-form {
+  display: flex;
+  flex-direction: column;
+}
+.popup-form-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -519,7 +549,8 @@ html {
   color: #fff;
   font-size: 1.25em;
   margin-top: 40px;
-  grid-area: 2 / 2 / 2 / 3;
+  margin-left: auto;
+  margin-right: auto;
 }
 .card__discounted-popup-wrapper {
   position: relative;
@@ -664,7 +695,7 @@ html {
   }
   .card__discount-block_popup {
     top: -20px;
-    right: 0px;
+    right: -30px;
   }
   .card__price {
     text-align: center;
@@ -761,12 +792,12 @@ html {
     margin-bottom: 60px;
     overflow: hidden;
   }
-  .popup-form {
+  .popup-form-wrapper {
     grid-template-columns: 1fr;
   }
-  .popup__btn {
-    grid-area: auto;
-  }
+  /* .popup__btn {
+    
+  } */
   .card_popup {
     padding: 18px;
   }
@@ -792,5 +823,8 @@ html {
     top: -10px;
     right: auto;
     left: 120px;
+  }
+  .card__checked {
+    right: 22px;
   }
 }
