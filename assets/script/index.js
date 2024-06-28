@@ -140,7 +140,7 @@ async function getPosts() {
 }
 
 getPosts();
-let twoMinutes = 3;
+let twoMinutes = 120;
 const timer = () => {
   const minets = Math.trunc(twoMinutes / 60);
   jsMinutes.textContent = `0${minets}`;
