@@ -52,7 +52,7 @@ const createCardWithoutDiscount = (i, name, price, arrText) => {
       <div class="card__price-wrapper">
         <p class="card__discounted-price card__discounted-price_without-discont">${price[i]}₽</p>
       </div>
-      <p class="card__text">${arrText[i]}</p>
+      <p class="card__text card__text_stop-card">${arrText[i]}</p>
     `;
 };
 const createPopupCard = (i, name, price, discountPrice, discount) => {
@@ -140,7 +140,7 @@ async function getPosts() {
 }
 
 getPosts();
-let twoMinutes = 120;
+let twoMinutes = 3;
 const timer = () => {
   const minets = Math.trunc(twoMinutes / 60);
   jsMinutes.textContent = `0${minets}`;

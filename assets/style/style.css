@@ -3,6 +3,7 @@ html {
 }
 * {
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 .root {
   background-color: #f5f7f7;
@@ -28,23 +29,27 @@ html {
 .block {
   max-width: 1098px;
   min-width: 300px;
-  width: 100%;
+  /* width: 100%; */
   box-sizing: border-box;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: center;
-
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fff;
+  width: 479px;
 }
 .header__text {
   font-size: 1.875em;
+  /* width: 342px; */
 }
 .header__timer-block {
   display: flex;
-  padding-left: 15px;
+  margin-left: 43px;
 }
 .header__timer {
   font-family: "Bebas Neue", sans-serif;
@@ -52,13 +57,18 @@ html {
   font-style: normal;
   font-size: 3.75em;
   color: #01b9c5;
-  line-height: 103%;
-  margin: 0;
+  line-height: 100%;
+  margin: 0 0 5px 0;
+  /* margin-bottom: 13px; */
+  /* margin-top: -4px; */
 }
 .header__timer-text {
   color: #818798;
   margin: 0;
+  margin-top: -13px;
   font-size: 1em;
+  /* line-height: 0.8em; */
+  text-align: center;
 }
 
 .header__icon {
@@ -123,11 +133,12 @@ html {
 .main__wrapper-grid {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: 79px;
+  gap: 83px;
   padding: 97px 0 0 0;
 }
 .main__wrapper-img {
   position: relative;
+  left: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -148,19 +159,20 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr auto;
-  column-gap: 12px;
-  row-gap: 40px;
+  column-gap: 7px;
+  row-gap: 39px;
 }
 .card {
   position: relative;
-  max-height: 261px;
+  /* max-height: 261px; */
   background-color: #fff;
   border: 2px solid #d3d6dd;
   border-radius: 20px;
-  padding: 45px 18px 26px 18px;
+  padding: 40px 18px 26px 31px;
+  min-width: 192px;
 }
 .card_popup {
-  padding: 26px;
+  padding: 26px 26px 43px 26px;
 }
 .card:hover {
   background-color: #01b9c50d;
@@ -170,7 +182,7 @@ html {
   opacity: 0;
   position: absolute;
   top: 27px;
-  right: 22px;
+  right: 18px;
   width: 22px;
   height: 22px;
 }
@@ -183,7 +195,7 @@ html {
   border-radius: 50%;
   position: absolute;
   top: 27px;
-  right: 11px;
+  right: 18px;
   width: 22px;
   height: 22px;
 }
@@ -209,18 +221,18 @@ html {
 .card__discount-block {
   position: absolute;
   top: -29px;
-  right: 5px;
+  right: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card__discount-block_popup {
-  top: -20px;
-  right: 20px;
+  top: -43px;
+  right: -61px;
 }
 .card__icon {
-  width: 70px;
-  height: 70px;
+  width: 67px;
+  height: 67px;
 }
 .card__icon_popup {
   width: 50px;
@@ -230,12 +242,13 @@ html {
   color: #fff;
   position: absolute;
   z-index: 1;
+  font-size: 1.125em;
 }
 .card__title {
   margin: 0;
   color: #687078;
   text-transform: uppercase;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.75em;
@@ -247,7 +260,7 @@ html {
 .card__discounted-price {
   font-size: 3.125em;
   color: #2d3242;
-  margin: 0;
+  margin: 21px 0 0 -19px;
   text-align: center;
 }
 .card__discounted-price_without-discont {
@@ -256,15 +269,17 @@ html {
 .card__discounted-price_popup {
   font-size: 2.875em;
   text-align: start;
+  display: inline;
+  margin: 1px 0px 0px 1px;
 }
 .card__price {
-  margin: 0;
+  margin: -1px 24px 0 0;
   font-weight: 500;
   color: #95979f;
   text-decoration: line-through;
   font-size: 1.5em;
   text-align: end;
-  margin-right: 15px;
+  margin-right: 24px;
 }
 .card__price_popup {
   text-decoration: none;
@@ -296,19 +311,20 @@ html {
   left: -2px;
 }
 .card__text {
-  margin: 18px 0 0 12px;
+  margin: 15px 0 0 0;
   font-weight: 500;
   font-size: 1em;
   max-width: 117px;
   text-align: center;
+  line-height: 124%;
 }
 .card-big {
   grid-area: 2 / 1 / 2 / 4;
-  max-height: 121px;
+  max-height: 128px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 23px 31px;
+  justify-content: flex-start;
+  padding: 14px 23px 35px 28px;
 }
 .card-big > .card__text {
   max-width: 161px;
@@ -317,14 +333,32 @@ html {
 .card-big > .card__title {
   font-size: 2em;
   color: #2d3242;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
+.card-big > .card__price-wrapper {
+  position: relative;
+}
+.card-big > .card__price-wrapper > .card__discounted-price {
+  margin: 0px 0px 0px 18px;
+}
+.card-big > .card__price-wrapper > .card__price {
+  margin: 0;
+  position: absolute;
+  bottom: -18px;
+  right: 9px;
+}
+.card-big > .card__text {
+  margin-left: 55px;
+}
+.main {
+  padding-top: 113px;
+}
 .main__information-text {
   font-weight: 500;
   font-size: 1.125em;
+  margin: 13px 0 0 0;
 }
 .form {
   display: flex;
@@ -336,6 +370,7 @@ html {
   position: relative;
   width: 100%;
   display: flex;
+  margin-top: 30px;
 }
 .form__input {
   position: absolute;
@@ -377,7 +412,7 @@ html {
   color: #818798;
   max-width: 418px;
   display: inline-block;
-  margin: 0 0 0 12px;
+  margin: 0 0 0 3px;
 }
 .form__link {
   color: #2d97f9;
@@ -388,11 +423,11 @@ html {
   background-color: #fd4d35;
   border: 1px solid #fd4d35;
   color: #fff;
-  padding: 28px 100px;
+  padding: 27px 104px;
   border-radius: 60px;
   font-size: 20px;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 49px;
   cursor: pointer;
 }
 .main__text {
@@ -446,7 +481,8 @@ html {
 
 .popup__wrapper {
   background-color: #f5f7f7;
-  min-width: 75%;
+  min-width: 52%;
+  height: 59%;
   padding: 0 40px 40px 40px;
   position: relative;
 }
@@ -455,7 +491,7 @@ html {
   background-color: #01b9c5;
   width: auto;
   color: #fff;
-  padding: 5px 10px;
+  padding: 5px 10px 11px 10px;
   max-width: 170px;
 }
 .popup__title {
@@ -465,7 +501,7 @@ html {
   text-transform: uppercase;
   font-size: 1.875rem;
   color: #12191d;
-  margin: 30px 0 0 47px;
+  margin: 33px 0 0 47px;
 }
 .popup__title_primary {
   color: #01b9c5;
@@ -475,8 +511,8 @@ html {
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 13px;
-  right: 13px;
+  top: 20px;
+  right: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,6 +538,7 @@ html {
   font-size: 1.5rem;
   color: #2d3242;
   text-align: center;
+  margin: 32px 0 0 0;
 }
 .poput__text_bold {
   color: #12191d;
@@ -515,9 +552,10 @@ html {
   border: 1px solid #01b9c5;
   border-radius: 30px;
   padding: 15px 30px;
-  width: 75%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 8px;
 }
 .poput__text_start {
   text-align: start;
@@ -526,6 +564,7 @@ html {
 .popup-form {
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 }
 .popup-form-wrapper {
   display: grid;
@@ -542,9 +581,12 @@ html {
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
+  width: 46%;
 }
 .card__discounted-popup-wrapper {
   position: relative;
+  display: inline;
+  top: 26px;
 }
 .blink {
   animation-name: blinker;
@@ -659,6 +701,7 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     width: 100%;
+    gap: 5px;
   }
 
   .card-big {
@@ -682,16 +725,19 @@ html {
   }
   .card__discount-block {
     top: 4px;
-    right: 9px;
+    right: 7px;
   }
   .card__discount-block_popup {
-    top: -20px;
-    right: -30px;
+    top: -51px;
+    right: -49px;
   }
   .card__price {
     text-align: center;
     margin-right: 0;
     margin-left: 100px;
+  }
+  .poput__text_border {
+    width: calc(100% - 80px);
   }
   .card__price_popup {
     text-decoration: none;
@@ -702,10 +748,19 @@ html {
   .card__special {
     display: none;
   }
+  .popup__wrapper {
+    height: 66%;
+  }
 }
 @media screen and (max-width: 786px) {
+  .header {
+    width: 80%;
+    justify-content: center;
+  }
   .header__text {
     font-size: 1em;
+    margin-top: 30px;
+    justify-content: center;
   }
   .header__timer {
     font-size: 2.5em;
@@ -717,24 +772,35 @@ html {
     width: 4px;
     height: 14px;
     top: 13px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 18px;
+    margin-right: 18px;
   }
   .header__timer-block {
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    margin-left: 29px;
+    padding-top: 13px;
   }
   .main {
-    padding-top: 90px;
-    padding-left: 20px;
+    padding-top: 98px;
+    padding-left: 21px;
     padding-right: 20px;
+  }
+  .main__wrapper-grid {
+    padding: 0 0 0 0;
+    gap: 0;
   }
   .main__title {
     font-size: 24px;
     text-align: start;
   }
+  .main__tariffs {
+    margin-top: 8px;
+  }
   .main__img {
-    width: 69%;
-    object-fit: cover;
+    width: 80%;
+    object-fit: contain;
+    margin-top: 21px;
+    margin-right: 26px;
   }
   .main__shadow {
     width: 69%;
@@ -743,7 +809,7 @@ html {
     max-height: none;
   }
   .card {
-    padding: 36px 24px;
+    padding: 32px 15px 25px 24px;
   }
   .card__icon {
     width: 50px;
@@ -763,12 +829,56 @@ html {
 
   .card__discounted-price {
     font-size: 2.75em;
+    margin: 0;
+    position: absolute;
+    top: 34px;
+    left: 147px;
+  }
+  .card-big > .card__price-wrapper {
+    position: static;
+  }
+  .card-big > .card__price-wrapper > .card__discounted-price {
+    font-size: 2.75em;
+    margin: 0;
+    top: 34px;
+    right: 61px;
+  }
+  .card-big > .card__price-wrapper > .card__price {
+    margin: 0;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    top: 20px;
+    text-align: end;
+    margin-right: 55px;
   }
   .card__price {
     text-align: center;
     margin-right: 0;
     margin-left: 100px;
     font-size: 1.25em;
+    position: relative;
+    top: 22px;
+  }
+  .card-big > .card__text {
+    margin-left: 0;
+    position: relative;
+    top: -12px;
+    left: -3px;
+  }
+  .main__information-text {
+    font-size: 1em;
+    margin: 7px 0 0 0;
+  }
+  .form__wrapper {
+    margin-top: 35px;
+  }
+  .form__button {
+    margin-top: 21px;
+    width: 100%;
+  }
+  .main__text {
+    display: none;
   }
   .popup {
     align-items: flex-start;
@@ -780,21 +890,56 @@ html {
     margin-top: 60px;
     margin-bottom: 60px;
     overflow: hidden;
+    position: relative;
+    height: auto;
+  }
+  .popup__hot-offer {
+    position: relative;
+    top: 0;
+    left: -19px;
+  }
+  .popup-form {
+    margin-top: 10px;
+  }
+  .popup__close {
+    width: 17px;
+    height: 17px;
   }
   .popup-form-wrapper {
     grid-template-columns: 1fr;
+    gap: 7px;
   }
   .card_popup {
     padding: 18px;
+    min-height: 133px;
   }
   .card__line {
     display: none;
   }
   .popup__title {
     font-size: 1.5rem;
+    margin: 25px 0 0 25px;
+  }
+  .popup__title_primary {
+    margin: 0;
   }
   .poput__text {
     font-size: 0.9375em;
+    margin: 8px 0 0 0;
+  }
+  .poput__text_border {
+    margin: 27px 0 0 0;
+    width: 100%;
+    padding: 12px 15px;
+  }
+  .poput__text_primary {
+    margin: 0;
+  }
+  .card__text_stop-card {
+    margin-top: 20px;
+  }
+  .poput__text_start {
+    margin-top: 29px;
   }
   .card__icon_popup {
     width: 40px;
@@ -802,15 +947,29 @@ html {
   }
   .card__price_popup {
     position: absolute;
-    bottom: 29px;
+    bottom: 22px;
     right: 30px;
+    top: auto;
+    margin: 0;
   }
   .card__discount-block_popup {
-    top: -10px;
-    right: auto;
-    left: 120px;
+    top: -45px;
+    right: -60px;
   }
   .card__checked {
     right: 22px;
+  }
+  .card__discounted-price_popup {
+    position: relative;
+    top: -7px;
+    left: 0;
+    display: inline;
+  }
+  .card__discounted-popup-wrapper {
+    display: inline;
+  }
+  .popup__btn {
+    margin-top: 18px;
+    width: 100%;
   }
 }
