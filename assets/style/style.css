@@ -264,7 +264,7 @@ html {
   text-align: center;
 }
 .card__discounted-price_without-discont {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .card__discounted-price_popup {
   font-size: 2.875em;
@@ -482,7 +482,7 @@ html {
 .popup__wrapper {
   background-color: #f5f7f7;
   min-width: 52%;
-  height: 59%;
+  min-height: 600px;
   padding: 0 40px 40px 40px;
   position: relative;
 }
@@ -707,7 +707,7 @@ html {
   .card-big {
     grid-area: auto;
     max-height: 261px;
-    padding: 45px 18px 26px 18px;
+    padding: 40px 18px 26px 31px;
     display: block;
   }
   .card__text {
@@ -715,6 +715,7 @@ html {
   }
   .card-big > .card__text {
     max-width: 117px;
+    margin-left: 0;
   }
   .card-big > .card__title {
     font-size: 1.5em;
@@ -736,6 +737,17 @@ html {
     margin-right: 0;
     margin-left: 100px;
   }
+
+  .card-big > .card__price-wrapper > .card__price {
+    position: relative;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 100px;
+    font-weight: 500;
+    color: #95979f;
+    text-decoration: line-through;
+    font-size: 1.5em;
+  }
   .poput__text_border {
     width: calc(100% - 80px);
   }
@@ -747,9 +759,6 @@ html {
   }
   .card__special {
     display: none;
-  }
-  .popup__wrapper {
-    height: 66%;
   }
 }
 @media screen and (max-width: 786px) {
@@ -840,8 +849,9 @@ html {
   .card-big > .card__price-wrapper > .card__discounted-price {
     font-size: 2.75em;
     margin: 0;
+    position: absolute;
     top: 34px;
-    right: 61px;
+    left: 147px;
   }
   .card-big > .card__price-wrapper > .card__price {
     margin: 0;
@@ -891,7 +901,6 @@ html {
     margin-bottom: 60px;
     overflow: hidden;
     position: relative;
-    height: auto;
   }
   .popup__hot-offer {
     position: relative;
